@@ -1,0 +1,29 @@
+
+<div ngbDropdown class="mt-4">
+  <div ngbDropdownToggle class="align-items-center" [ngClass]="toolbarButtonMarginClass">
+    <div class="cursor-pointer symbol" [ngClass]="toolbarUserAvatarHeightClass">
+      <img src="../../../../../assets/media/icons/icons/user.png" alt="metronic" />
+    </div>
+    <div ngbDropdownMenu>
+      <div class="row">
+        <p *ngIf="userdetails!=''" class=" my-auto col-8 fw-bold   fs-7 cursor-pointer">
+          {{ userdetails.UserEmail }}
+        </p>
+        <button (click)="logout()" class=" col-4 px-5 cursor-pointer btn btn-light-primary"> Logout </button>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-container *ngIf="headerLeft === 'menu'">
+  <div class="d-flex align-items-center d-lg-none ms-2 me-n3" title="Show header menu">
+    <div class="
+        btn btn-icon btn-active-light-primary
+        w-30px
+        h-30px
+        w-md-40px
+        h-md-40px
+      " id="kt_header_menu_mobile_toggle">
+      <span [inlineSVG]="'./assets/media/icons/duotune/text/txt001.svg'" class="svg-icon svg-icon-1"></span>
+    </div>
+  </div>
+</ng-container>
